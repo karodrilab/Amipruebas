@@ -1,0 +1,6 @@
+.sfdx/
+build/server.crt
+.vscode/
+.DS_Store
+
+/.localHistory
