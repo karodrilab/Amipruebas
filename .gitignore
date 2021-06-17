@@ -2,5 +2,5 @@
 build/server.crt
 .vscode/
 .DS_Store
-
+server.csr
 /.localHistory
