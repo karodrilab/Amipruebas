@@ -6,7 +6,7 @@
         },
         {
             "path": "src/main/default",
-            "package": "Amipruebas",
+            "package": "CircleCI",
             "default": false
         }
     ],
