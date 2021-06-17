@@ -4,11 +4,6 @@
             "path": "src",
             "default": true
         },
-        {
-            "path": "src/main/default",
-            "package": "CircleCI",
-            "default": false
-        }
     ],
     "namespace": "",
   "sfdcLoginUrl": "https://test.salesforce.com",
