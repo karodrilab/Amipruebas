@@ -6,11 +6,11 @@
         },
         {
             "path": "src/main/default",
-            "package": "CircleCI",
+            "package": "Amipruebas",
             "default": false
         }
     ],
     "namespace": "",
   "sfdcLoginUrl": "https://test.salesforce.com",
-  "sourceApiVersion": "51.0"
+  "sourceApiVersion": "43.0"
 }
