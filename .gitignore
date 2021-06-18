@@ -1,1 +1,9 @@
+<<<<<<< HEAD
+=======
+.sfdx/
+build/server.crt
+.vscode/
+.DS_Store
+server.csr
+>>>>>>> 6bb8f31ca45459b9ca3a874dacef7e4d441c36f6
 /.localHistory
