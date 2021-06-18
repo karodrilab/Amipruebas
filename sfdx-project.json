@@ -6,6 +6,6 @@
         },
     ],
     "namespace": "",
-  "sfdcLoginUrl": "https://test.salesforce.com",
+  "sfdcLoginUrl": "https://amicar--pruebasci.my.salesforce.com/",
   "sourceApiVersion": "43.0"
 }
