@@ -20,12 +20,12 @@ jobs:
       #- run:
       #    name: Carpeta Tests
       #    command: . classes/test.cls
-      #- run:
-      #    name: Validate Components & Run Tests
-      #    no_output_timeout: 1m 
-      #    command: . build/test.sh
-      #- store_test_results:
-      #    path: test-results
+      - run:
+          name: Validate Components & Run Tests
+          no_output_timeout: 20m 
+          command: . build/test.sh
+      - store_test_results:
+          path: test-results
   deploy-prod:
     docker:
     - image: circleci/node:latest
