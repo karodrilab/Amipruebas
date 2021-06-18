@@ -22,9 +22,7 @@ jobs:
       #    command: . classes/test.cls
       -run:
           name: Create Test Directory
-          command: |
-                   echo Running test
-                   mkdir -p /tmp/test-results
+          command: mkdir -p /tmp/test-results
       - run:
           name: Validate Components & Run Tests
           no_output_timeout: 2m
