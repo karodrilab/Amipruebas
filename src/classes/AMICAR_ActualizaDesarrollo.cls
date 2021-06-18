@@ -8,6 +8,7 @@ No. Fecha                Autor                     Descripción
 ------ ---------- ---------------------------------------------------------------
 1.0 30-04-2020            RJZ                     Creación de la Clase.
 1.1 15-12-2020			  RL					  Modificación de código para pegar "factorCalculated" en vez de value para carga de productos.
+1234
 ***********************************************************************************/
 public with sharing class AMICAR_ActualizaDesarrollo {
 
