@@ -4,3 +4,8 @@ build/server.crt
 .DS_Store
 server.csr
 /.localHistory
+**/.localHistory
+*.sfuo
+TestCache.xml
+TestsResultsCache.xml
+**/.cache
