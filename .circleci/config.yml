@@ -20,12 +20,17 @@ jobs:
       #- run:
       #    name: Carpeta Tests
       #    command: . classes/test.cls
+      -run:
+          name: Create Test Directory
+          command: |
+                   echo Running test
+                   mkdir -p /tmp/test-results
       - run:
           name: Validate Components & Run Tests
           no_output_timeout: 2m
           command: . build/test.sh
       - store_test_results:
-          path: mkdir -p /tmp/test-results
+          path: test-results
   deploy-prod:
     docker:
     - image: circleci/node:latest
