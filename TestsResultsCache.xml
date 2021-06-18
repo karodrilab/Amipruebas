@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestsResultsCache
+    LastClearTime="0001-01-01T00:00:00">
+    <TestClassesCache>
+        <TestClassCache>
+            <TestClassId>01p2E00000C5OQbQAN</TestClassId>
+            <TestQueueId>7098A000001kNTaQAM</TestQueueId>
+            <TestMethodsCache>
+                <TestMethodCache>
+                    <Name>testParse</Name>
+                    <TestResultStatus>Pass</TestResultStatus>
+                </TestMethodCache>
+            </TestMethodsCache>
+        </TestClassCache>
+    </TestClassesCache>
+    <DeletedJobsIds />
+</TestsResultsCache>
