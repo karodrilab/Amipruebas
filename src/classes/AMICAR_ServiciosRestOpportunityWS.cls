@@ -10,6 +10,7 @@ No. Fecha                Autor                     Descripción
 1.1 23-01-2021            RL                       Se agrega sección IVA
 1.2 25-01-2021            RL                       Ajuste de código
 1.3 LALALA
+1.4 BRINCO BRINCO LA LA LA
 ***********************************************************************************/
 
 @RestResource(urlMapping='/Opportunities/*')
