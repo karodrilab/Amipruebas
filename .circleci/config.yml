@@ -42,9 +42,9 @@ workflows:
           filters:
             branches:
               ignore:
-                - AUT
+                - Develop
       - deploy-prod:
           filters:
             branches:
               only:
-                - Develop
+                - UAT
