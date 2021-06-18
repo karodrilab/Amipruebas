@@ -23,10 +23,9 @@ jobs:
       - run:
           name: Validate Components & Run Tests
           no_output_timeout: 5m
-          mkdir -p /tmp/test-results
           command: . build/test.sh
       - store_test_results:
-          path: test-results
+          path: mkdir -p /tmp/test-results
   deploy-prod:
     docker:
     - image: circleci/node:latest
