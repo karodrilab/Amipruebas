@@ -45,8 +45,7 @@ workflows:
       - build:
           filters:
             branches:
-              ignore:
-                - PruebaRodri
+              ignore: master
       - deploy-prod:
           filters:
             branches:
