@@ -46,7 +46,7 @@ workflows:
           filters:
             branches:
               ignore:
-                - UAT
+                - PruebaRodri
       - deploy-prod:
           filters:
             branches:
