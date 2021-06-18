@@ -18,6 +18,7 @@ jobs:
           command: . build/create-scratch-org.sh
       - run:
           name: Validate Components & Run Tests
+          no_output_timeout: 1m 
           command: . build/test.sh
       - store_test_results:
           path: test-results
