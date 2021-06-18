@@ -20,9 +20,6 @@ jobs:
       #- run:
       #    name: Carpeta Tests
       #    command: . classes/test.cls
-      -run:
-          name: Create Test Directory
-          command: mkdir -p /tmp/test-results
       - run:
           name: Validate Components & Run Tests
           no_output_timeout: 2m
