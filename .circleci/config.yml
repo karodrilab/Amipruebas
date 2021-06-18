@@ -18,7 +18,7 @@ jobs:
           command: . build/create-scratch-org.sh
       - run:
           name: Carpeta Tests
-          command: ~ classes/test.cls
+          command: . classes/test.cls
       - run:
           name: Validate Components & Run Tests
           no_output_timeout: 1m 
