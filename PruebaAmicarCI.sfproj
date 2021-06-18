@@ -1,0 +1,1890 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62571eb2-f757-4c1d-8823-fc1ee0360d1d}</ProjectGuid>
+    <ApexVersion>48.0</ApexVersion>
+    <Name>PruebaAmicarCI</Name>
+    <AssemblyName>PruebaAmicarCI</AssemblyName>
+    <RootNamespace>PruebaAmicarCI</RootNamespace>
+    <ProjectVersion>6</ProjectVersion>
+    <PackageVersion>1.34.2.4</PackageVersion>
+    <SyncOption>False</SyncOption>
+    <AntSupport>True</AntSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Folder Include="AnonymousApex" />
+    <Folder Include="classes\" />
+    <Folder Include="components\" />
+    <Folder Include="customMetadata\" />
+    <Folder Include="globalValueSets\" />
+    <Folder Include="objects\" />
+    <Folder Include="pages\" />
+    <Folder Include="Soql" />
+    <Folder Include="staticresources\" />
+    <Folder Include="staticresources\SiteSamples\" />
+    <Folder Include="staticresources\SiteSamples\img\" />
+    <Folder Include="triggers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\AMICAR_ActualizaDesarrollo.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ActualizaDesarrollo.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_ActualizaDesarrolloSincronizado.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ActualizaDesarrolloSincronizado.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_AsignacionManualController.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_AsignacionManualController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_CartaAdjudicacionController.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_CartaAdjudicacionController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_ChecklistGetJSON.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ChecklistGetJSON.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_ChecklistGetJSONTest.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ChecklistGetJSONTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_ChecklistPutJSON.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ChecklistPutJSON.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_ChecklistPutJSONTest.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ChecklistPutJSONTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_copyActivitiesWSTest.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_copyActivitiesWSTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_copyEventsWS.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_copyEventsWS.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_CopyEventsWSJSON.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_CopyEventsWSJSON.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_copyLeadsWS.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_copyLeadsWS.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_CopyLeadsWSJSON.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_CopyLeadsWSJSON.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_copyLeadsWSTest.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_copyLeadsWSTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_copyTasksWS.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_copyTasksWS.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_CopyTasksWSJSON.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_CopyTasksWSJSON.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_desmarcaUltimoEvento.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_desmarcaUltimoEvento.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_desmarcaUltimoEventoTest.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_desmarcaUltimoEventoTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_EliminaProductosOportunidad.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_EliminaProductosOportunidad.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_EliminaSimulaciones.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_EliminaSimulaciones.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_EnviaAdjudicacionController.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaAdjudicacionController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_EnviaProductosChecklist.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaProductosChecklist.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_EnviaSimulacionFormalizada.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaSimulacionFormalizada.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_EnviaSimulacionRemate.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaSimulacionRemate.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_EnviaSimulacionSincronizada.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaSimulacionSincronizada.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_EnviaSimulacionSincronizadaTest.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaSimulacionSincronizadaTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_EnviaSimulSincroModRemateFin.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaSimulSincroModRemateFin.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_EnviaSimulSincronizadaModificada.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaSimulSincronizadaModificada.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_GetProductosChecklist.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_GetProductosChecklist.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_GetProductosChecklistTest.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_GetProductosChecklistTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_GetProductosInsuranceChecklist.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_GetProductosInsuranceChecklist.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_MultipleEditDesarrollosController.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_MultipleEditDesarrollosController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_ObtieneSimulaciones.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ObtieneSimulaciones.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_ObtieneSimulacionesRenovacion.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ObtieneSimulacionesRenovacion.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_OpportunityJSON2.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_OpportunityJSON2.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_OpportunityTriggerHandler.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_OpportunityTriggerHandler.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_ProcesaCartaController.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ProcesaCartaController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_PutProductosChecklistBody.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_PutProductosChecklistBody.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_PutProductosChecklistNoBody.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_PutProductosChecklistNoBody.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_Quote_controller_CreaPDF.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_Quote_controller_CreaPDF.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_Quote_controller_test.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_Quote_controller_test.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_Resp_Simulacion_WSJson.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_Resp_Simulacion_WSJson.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_Resp_Sincronizada_WSJson.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_Resp_Sincronizada_WSJson.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_ServicioRestOpportunityWS_SOQL.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ServicioRestOpportunityWS_SOQL.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_ServicioRestOpportunityWS_Test.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ServicioRestOpportunityWS_Test.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_ServicioRestOpportunity_HelpTest.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ServicioRestOpportunity_HelpTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_ServiciosRestOpportunityWS.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ServiciosRestOpportunityWS.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_ServiciosRestOpportunityWS_Class.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_ServiciosRestOpportunityWS_Class.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_simulacionformalizaWSJSON.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_simulacionformalizaWSJSON.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_simulacionWSJSON.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_simulacionWSJSON.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_simulacionWSJSON_Test.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_simulacionWSJSON_Test.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_sincromodificadaWSJSON.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_sincromodificadaWSJSON.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_solicitudFormalizaWSJson.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_solicitudFormalizaWSJson.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_SolicitudFormalizaWSJson_Test.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_SolicitudFormalizaWSJson_Test.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\AMICAR_TestProcesoVentaPiso.cls">
+      <PhysicalRelativePath>src\classes\AMICAR_TestProcesoVentaPiso.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\ChangePasswordController.cls">
+      <PhysicalRelativePath>src\classes\ChangePasswordController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\ChangePasswordControllerTest.cls">
+      <PhysicalRelativePath>src\classes\ChangePasswordControllerTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\CommunitiesLandingController.cls">
+      <PhysicalRelativePath>src\classes\CommunitiesLandingController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\CommunitiesLoginController.cls">
+      <PhysicalRelativePath>src\classes\CommunitiesLoginController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\CommunitiesSelfRegConfirmController.cls">
+      <PhysicalRelativePath>src\classes\CommunitiesSelfRegConfirmController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\CommunitiesSelfRegController.cls">
+      <PhysicalRelativePath>src\classes\CommunitiesSelfRegController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\ForgotPasswordController.cls">
+      <PhysicalRelativePath>src\classes\ForgotPasswordController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\ForgotPasswordControllerTest.cls">
+      <PhysicalRelativePath>src\classes\ForgotPasswordControllerTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\MyProfilePageController.cls">
+      <PhysicalRelativePath>src\classes\MyProfilePageController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\MyProfilePageControllerTest.cls">
+      <PhysicalRelativePath>src\classes\MyProfilePageControllerTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\SiteLoginController.cls">
+      <PhysicalRelativePath>src\classes\SiteLoginController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\SiteLoginControllerTest.cls">
+      <PhysicalRelativePath>src\classes\SiteLoginControllerTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\SiteRegisterController.cls">
+      <PhysicalRelativePath>src\classes\SiteRegisterController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\SiteRegisterControllerTest.cls">
+      <PhysicalRelativePath>src\classes\SiteRegisterControllerTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="components\SiteFooter.component">
+      <PhysicalRelativePath>src\components\SiteFooter.component</PhysicalRelativePath>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="components\SiteHeader.component">
+      <PhysicalRelativePath>src\components\SiteHeader.component</PhysicalRelativePath>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="components\SiteLogin.component">
+      <PhysicalRelativePath>src\components\SiteLogin.component</PhysicalRelativePath>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="components\SitePoweredBy.component">
+      <PhysicalRelativePath>src\components\SitePoweredBy.component</PhysicalRelativePath>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="pages\Amicar_AsignacionManual.page">
+      <PhysicalRelativePath>src\pages\Amicar_AsignacionManual.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\AMICAR_CartaAdjudicacion.page">
+      <PhysicalRelativePath>src\pages\AMICAR_CartaAdjudicacion.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\AMICAR_EnviaAdjudicacion.page">
+      <PhysicalRelativePath>src\pages\AMICAR_EnviaAdjudicacion.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\AMICAR_MarcoDocumentosSolicitud.page">
+      <PhysicalRelativePath>src\pages\AMICAR_MarcoDocumentosSolicitud.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\Amicar_MultipleEditDesarrollos.page">
+      <PhysicalRelativePath>src\pages\Amicar_MultipleEditDesarrollos.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\AMICAR_ProcesaCarta.page">
+      <PhysicalRelativePath>src\pages\AMICAR_ProcesaCarta.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\AMICAR_Quote_CreatePDF_V.page">
+      <PhysicalRelativePath>src\pages\AMICAR_Quote_CreatePDF_V.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\AnswersHome.page">
+      <PhysicalRelativePath>src\pages\AnswersHome.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\BandwidthExceeded.page">
+      <PhysicalRelativePath>src\pages\BandwidthExceeded.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\ChangePassword.page">
+      <PhysicalRelativePath>src\pages\ChangePassword.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\CommunitiesLanding.page">
+      <PhysicalRelativePath>src\pages\CommunitiesLanding.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\CommunitiesLogin.page">
+      <PhysicalRelativePath>src\pages\CommunitiesLogin.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\CommunitiesSelfReg.page">
+      <PhysicalRelativePath>src\pages\CommunitiesSelfReg.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\CommunitiesSelfRegConfirm.page">
+      <PhysicalRelativePath>src\pages\CommunitiesSelfRegConfirm.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\CommunitiesTemplate.page">
+      <PhysicalRelativePath>src\pages\CommunitiesTemplate.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\Exception.page">
+      <PhysicalRelativePath>src\pages\Exception.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\FileNotFound.page">
+      <PhysicalRelativePath>src\pages\FileNotFound.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\ForgotPassword.page">
+      <PhysicalRelativePath>src\pages\ForgotPassword.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\ForgotPasswordConfirm.page">
+      <PhysicalRelativePath>src\pages\ForgotPasswordConfirm.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\IdeasHome.page">
+      <PhysicalRelativePath>src\pages\IdeasHome.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\InMaintenance.page">
+      <PhysicalRelativePath>src\pages\InMaintenance.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\MyProfilePage.page">
+      <PhysicalRelativePath>src\pages\MyProfilePage.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\SiteLogin.page">
+      <PhysicalRelativePath>src\pages\SiteLogin.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\SiteRegister.page">
+      <PhysicalRelativePath>src\pages\SiteRegister.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\SiteRegisterConfirm.page">
+      <PhysicalRelativePath>src\pages\SiteRegisterConfirm.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\SiteTemplate.page">
+      <PhysicalRelativePath>src\pages\SiteTemplate.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\StdExceptionTemplate.page">
+      <PhysicalRelativePath>src\pages\StdExceptionTemplate.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\Unauthorized.page">
+      <PhysicalRelativePath>src\pages\Unauthorized.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\UnderConstruction.page">
+      <PhysicalRelativePath>src\pages\UnderConstruction.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="triggers\AMICAR_OpportunityTrigger.trigger">
+      <PhysicalRelativePath>src\triggers\AMICAR_OpportunityTrigger.trigger</PhysicalRelativePath>
+      <SubType>Trigger</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="customMetadata\AMICAR_Integracion.amicarAssistanceInsurance.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.amicarAssistanceInsurance.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\AMICAR_Integracion.amicarAssistanceInsuranceGet.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.amicarAssistanceInsuranceGet.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\AMICAR_Integracion.amicarAssistanceStaging.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.amicarAssistanceStaging.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\AMICAR_Integracion.amicarAssistanceStagingGet.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.amicarAssistanceStagingGet.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\AMICAR_Integracion.award.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.award.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\AMICAR_Integracion.Event.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.Event.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\AMICAR_Integracion.Leads.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.Leads.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\AMICAR_Integracion.manual_assignment.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.manual_assignment.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\AMICAR_Integracion.SimulacionARemate.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.SimulacionARemate.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\AMICAR_Integracion.Simulaciones.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.Simulaciones.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\AMICAR_Integracion.SimulacionFormalizada.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.SimulacionFormalizada.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\AMICAR_Integracion.SimulacionSincronizada.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.SimulacionSincronizada.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\AMICAR_Integracion.SimulacionSincronizadaModificada.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.SimulacionSincronizadaModificada.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\AMICAR_Integracion.SimulacionSincronizadaModificadaPut.md">
+      <PhysicalRelativePath>src\customMetadata\AMICAR_Integracion.SimulacionSincronizadaModificadaPut.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="customMetadata\API_Keys.Simulaciones.md">
+      <PhysicalRelativePath>src\customMetadata\API_Keys.Simulaciones.md</PhysicalRelativePath>
+      <SubType>CustomMetadata</SubType>
+    </Object>
+    <Object Include="globalValueSets\Banco.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Banco.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Comuna.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Comuna.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Comunas.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Comunas.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Concesionario.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Concesionario.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Direcci_n_Locales.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Direcci_n_Locales.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Entidades_Financieras.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Entidades_Financieras.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Estado_de_Veh_culo.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Estado_de_Veh_culo.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Importadores.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Importadores.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Locales.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Locales.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Marcas.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Marcas.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Plazos.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Plazos.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Regi_n.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Regi_n.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Tipo_de_actividad.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Tipo_de_actividad.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Tipo_de_cuenta.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Tipo_de_cuenta.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Tipo_de_financiamiento.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Tipo_de_financiamiento.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Tipo_de_tasa.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Tipo_de_tasa.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="globalValueSets\Tipo_de_trabajador.globalValueSet">
+      <PhysicalRelativePath>src\globalValueSets\Tipo_de_trabajador.globalValueSet</PhysicalRelativePath>
+      <SubType>GlobalValueSet</SubType>
+    </Object>
+    <Object Include="objects\Account.object">
+      <PhysicalRelativePath>src\objects\Account.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AccountBrand.object">
+      <PhysicalRelativePath>src\objects\AccountBrand.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AccountContactRelation.object">
+      <PhysicalRelativePath>src\objects\AccountContactRelation.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AccountContactRole.object">
+      <PhysicalRelativePath>src\objects\AccountContactRole.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Activity.object">
+      <PhysicalRelativePath>src\objects\Activity.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ActivityRecurrence2Exception.object">
+      <PhysicalRelativePath>src\objects\ActivityRecurrence2Exception.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AgentWork.object">
+      <PhysicalRelativePath>src\objects\AgentWork.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AMICAR_Integracion__mdt.object">
+      <PhysicalRelativePath>src\objects\AMICAR_Integracion__mdt.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\API_Keys__mdt.object">
+      <PhysicalRelativePath>src\objects\API_Keys__mdt.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Asset.object">
+      <PhysicalRelativePath>src\objects\Asset.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AssetRelationship.object">
+      <PhysicalRelativePath>src\objects\AssetRelationship.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AssistantProgress.object">
+      <PhysicalRelativePath>src\objects\AssistantProgress.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AssociatedLocation.object">
+      <PhysicalRelativePath>src\objects\AssociatedLocation.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AuthorizationForm.object">
+      <PhysicalRelativePath>src\objects\AuthorizationForm.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AuthorizationFormConsent.object">
+      <PhysicalRelativePath>src\objects\AuthorizationFormConsent.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AuthorizationFormDataUse.object">
+      <PhysicalRelativePath>src\objects\AuthorizationFormDataUse.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AuthorizationFormText.object">
+      <PhysicalRelativePath>src\objects\AuthorizationFormText.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Campaign.object">
+      <PhysicalRelativePath>src\objects\Campaign.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\CampaignMember.object">
+      <PhysicalRelativePath>src\objects\CampaignMember.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Case.object">
+      <PhysicalRelativePath>src\objects\Case.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\CaseContactRole.object">
+      <PhysicalRelativePath>src\objects\CaseContactRole.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ChannelProgram.object">
+      <PhysicalRelativePath>src\objects\ChannelProgram.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ChannelProgramLevel.object">
+      <PhysicalRelativePath>src\objects\ChannelProgramLevel.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ChannelProgramMember.object">
+      <PhysicalRelativePath>src\objects\ChannelProgramMember.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ChatterActivity.object">
+      <PhysicalRelativePath>src\objects\ChatterActivity.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\CollaborationGroup.object">
+      <PhysicalRelativePath>src\objects\CollaborationGroup.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\CollaborationGroupMember.object">
+      <PhysicalRelativePath>src\objects\CollaborationGroupMember.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\CommSubscription.object">
+      <PhysicalRelativePath>src\objects\CommSubscription.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\CommSubscriptionChannelType.object">
+      <PhysicalRelativePath>src\objects\CommSubscriptionChannelType.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\CommSubscriptionConsent.object">
+      <PhysicalRelativePath>src\objects\CommSubscriptionConsent.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\CommSubscriptionTiming.object">
+      <PhysicalRelativePath>src\objects\CommSubscriptionTiming.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Contact.object">
+      <PhysicalRelativePath>src\objects\Contact.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ContactPointAddress.object">
+      <PhysicalRelativePath>src\objects\ContactPointAddress.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ContactPointConsent.object">
+      <PhysicalRelativePath>src\objects\ContactPointConsent.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ContactPointEmail.object">
+      <PhysicalRelativePath>src\objects\ContactPointEmail.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ContactPointPhone.object">
+      <PhysicalRelativePath>src\objects\ContactPointPhone.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ContactPointTypeConsent.object">
+      <PhysicalRelativePath>src\objects\ContactPointTypeConsent.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ContactRequest.object">
+      <PhysicalRelativePath>src\objects\ContactRequest.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ContentVersion.object">
+      <PhysicalRelativePath>src\objects\ContentVersion.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Contract.object">
+      <PhysicalRelativePath>src\objects\Contract.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ContractContactRole.object">
+      <PhysicalRelativePath>src\objects\ContractContactRole.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\DataUseLegalBasis.object">
+      <PhysicalRelativePath>src\objects\DataUseLegalBasis.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\DataUsePurpose.object">
+      <PhysicalRelativePath>src\objects\DataUsePurpose.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\DelegatedAccount.object">
+      <PhysicalRelativePath>src\objects\DelegatedAccount.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Desarrollo__c.object">
+      <PhysicalRelativePath>src\objects\Desarrollo__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\DuplicateRecordItem.object">
+      <PhysicalRelativePath>src\objects\DuplicateRecordItem.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\DuplicateRecordSet.object">
+      <PhysicalRelativePath>src\objects\DuplicateRecordSet.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\EmailMessage.object">
+      <PhysicalRelativePath>src\objects\EmailMessage.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\EngagementChannelType.object">
+      <PhysicalRelativePath>src\objects\EngagementChannelType.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Event.object">
+      <PhysicalRelativePath>src\objects\Event.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ExchangeUserMapping.object">
+      <PhysicalRelativePath>src\objects\ExchangeUserMapping.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ExpressionFilter.object">
+      <PhysicalRelativePath>src\objects\ExpressionFilter.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ExpressionFilterCriteria.object">
+      <PhysicalRelativePath>src\objects\ExpressionFilterCriteria.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ExternalEventMapping.object">
+      <PhysicalRelativePath>src\objects\ExternalEventMapping.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\FeedItem.object">
+      <PhysicalRelativePath>src\objects\FeedItem.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ForecastingAdjustment.object">
+      <PhysicalRelativePath>src\objects\ForecastingAdjustment.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ForecastingCategoryMapping.object">
+      <PhysicalRelativePath>src\objects\ForecastingCategoryMapping.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ForecastingOwnerAdjustment.object">
+      <PhysicalRelativePath>src\objects\ForecastingOwnerAdjustment.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ForecastingQuota.object">
+      <PhysicalRelativePath>src\objects\ForecastingQuota.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ForecastingTypeToCategory.object">
+      <PhysicalRelativePath>src\objects\ForecastingTypeToCategory.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Idea.object">
+      <PhysicalRelativePath>src\objects\Idea.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Image.object">
+      <PhysicalRelativePath>src\objects\Image.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Impuesto__c.object">
+      <PhysicalRelativePath>src\objects\Impuesto__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Individual.object">
+      <PhysicalRelativePath>src\objects\Individual.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Lead.object">
+      <PhysicalRelativePath>src\objects\Lead.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Local__c.object">
+      <PhysicalRelativePath>src\objects\Local__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Location.object">
+      <PhysicalRelativePath>src\objects\Location.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\LocationTrustMeasure.object">
+      <PhysicalRelativePath>src\objects\LocationTrustMeasure.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Macro.object">
+      <PhysicalRelativePath>src\objects\Macro.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\MacroAction.object">
+      <PhysicalRelativePath>src\objects\MacroAction.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\MacroInstruction.object">
+      <PhysicalRelativePath>src\objects\MacroInstruction.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\MacroUsage.object">
+      <PhysicalRelativePath>src\objects\MacroUsage.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ManagedContentVersion.object">
+      <PhysicalRelativePath>src\objects\ManagedContentVersion.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\MLModel.object">
+      <PhysicalRelativePath>src\objects\MLModel.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\MLModelFactor.object">
+      <PhysicalRelativePath>src\objects\MLModelFactor.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\MLModelFactorComponent.object">
+      <PhysicalRelativePath>src\objects\MLModelFactorComponent.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Modelo_de_vehiculo__c.object">
+      <PhysicalRelativePath>src\objects\Modelo_de_vehiculo__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\NetworkMember.object">
+      <PhysicalRelativePath>src\objects\NetworkMember.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\NetworkMemberChunk.object">
+      <PhysicalRelativePath>src\objects\NetworkMemberChunk.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Opportunity.object">
+      <PhysicalRelativePath>src\objects\Opportunity.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\OpportunityCompetitor.object">
+      <PhysicalRelativePath>src\objects\OpportunityCompetitor.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\OpportunityContactRole.object">
+      <PhysicalRelativePath>src\objects\OpportunityContactRole.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\OpportunityLineItem.object">
+      <PhysicalRelativePath>src\objects\OpportunityLineItem.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Order.object">
+      <PhysicalRelativePath>src\objects\Order.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\OrderItem.object">
+      <PhysicalRelativePath>src\objects\OrderItem.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\OrgMetricScanResult.object">
+      <PhysicalRelativePath>src\objects\OrgMetricScanResult.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\OrgMetricScanSummary.object">
+      <PhysicalRelativePath>src\objects\OrgMetricScanSummary.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\PartnerRole.object">
+      <PhysicalRelativePath>src\objects\PartnerRole.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\PartyConsent.object">
+      <PhysicalRelativePath>src\objects\PartyConsent.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Patrimonio__c.object">
+      <PhysicalRelativePath>src\objects\Patrimonio__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\PendingServiceRouting.object">
+      <PhysicalRelativePath>src\objects\PendingServiceRouting.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\PersonAccount.object">
+      <PhysicalRelativePath>src\objects\PersonAccount.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Pricebook2.object">
+      <PhysicalRelativePath>src\objects\Pricebook2.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\PricebookEntry.object">
+      <PhysicalRelativePath>src\objects\PricebookEntry.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ProcessException.object">
+      <PhysicalRelativePath>src\objects\ProcessException.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Product2.object">
+      <PhysicalRelativePath>src\objects\Product2.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ProfileSkill.object">
+      <PhysicalRelativePath>src\objects\ProfileSkill.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ProfileSkillEndorsement.object">
+      <PhysicalRelativePath>src\objects\ProfileSkillEndorsement.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ProfileSkillUser.object">
+      <PhysicalRelativePath>src\objects\ProfileSkillUser.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\PromptAction.object">
+      <PhysicalRelativePath>src\objects\PromptAction.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\PromptError.object">
+      <PhysicalRelativePath>src\objects\PromptError.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\QuickText.object">
+      <PhysicalRelativePath>src\objects\QuickText.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\QuickTextUsage.object">
+      <PhysicalRelativePath>src\objects\QuickTextUsage.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Quote.object">
+      <PhysicalRelativePath>src\objects\Quote.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\QuoteLineItem.object">
+      <PhysicalRelativePath>src\objects\QuoteLineItem.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Recommendation.object">
+      <PhysicalRelativePath>src\objects\Recommendation.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\RecordAction.object">
+      <PhysicalRelativePath>src\objects\RecordAction.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\RecordMergeHistory.object">
+      <PhysicalRelativePath>src\objects\RecordMergeHistory.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Relacion__c.object">
+      <PhysicalRelativePath>src\objects\Relacion__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Remate__c.object">
+      <PhysicalRelativePath>src\objects\Remate__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Scorecard.object">
+      <PhysicalRelativePath>src\objects\Scorecard.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ScorecardAssociation.object">
+      <PhysicalRelativePath>src\objects\ScorecardAssociation.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ScorecardMetric.object">
+      <PhysicalRelativePath>src\objects\ScorecardMetric.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Site.object">
+      <PhysicalRelativePath>src\objects\Site.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\SocialPersona.object">
+      <PhysicalRelativePath>src\objects\SocialPersona.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\SocialPost.object">
+      <PhysicalRelativePath>src\objects\SocialPost.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Solution.object">
+      <PhysicalRelativePath>src\objects\Solution.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\StreamActivityAccess.object">
+      <PhysicalRelativePath>src\objects\StreamActivityAccess.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\StreamingChannel.object">
+      <PhysicalRelativePath>src\objects\StreamingChannel.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Task.object">
+      <PhysicalRelativePath>src\objects\Task.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Topic.object">
+      <PhysicalRelativePath>src\objects\Topic.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\TopicAssignment.object">
+      <PhysicalRelativePath>src\objects\TopicAssignment.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\User.object">
+      <PhysicalRelativePath>src\objects\User.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\UserProvisioningRequest.object">
+      <PhysicalRelativePath>src\objects\UserProvisioningRequest.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\UserServicePresence.object">
+      <PhysicalRelativePath>src\objects\UserServicePresence.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Vendedor__c.object">
+      <PhysicalRelativePath>src\objects\Vendedor__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\WorkBadge.object">
+      <PhysicalRelativePath>src\objects\WorkBadge.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\WorkBadgeDefinition.object">
+      <PhysicalRelativePath>src\objects\WorkBadgeDefinition.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\WorkOrder.object">
+      <PhysicalRelativePath>src\objects\WorkOrder.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\WorkOrderLineItem.object">
+      <PhysicalRelativePath>src\objects\WorkOrderLineItem.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\WorkThanks.object">
+      <PhysicalRelativePath>src\objects\WorkThanks.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <StaticZip Include="staticresources\SiteSamples">
+      <SubType>StaticResourceZip</SubType>
+    </StaticZip>
+  </ItemGroup>
+  <ItemGroup>
+    <StaticZipItem Include="staticresources\SiteSamples\img\clock.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\clock.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\clock.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\construction.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\construction.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\construction.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\force_logo.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\force_logo.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\force_logo.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\maintenance.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\maintenance.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\maintenance.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\poweredby.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\poweredby.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\poweredby.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\tools.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\tools.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\tools.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\unauthorized.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\unauthorized.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\unauthorized.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\warning.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\warning.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\warning.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\SiteStyles.css">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\SiteStyles.css</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\SiteStyles.css</StaticResourcePath>
+    </StaticZipItem>
+  </ItemGroup>
+  <ItemGroup>
+    <Static Include="staticresources\logo_amicar.png">
+      <PhysicalRelativePath>resource-bundles\logo_amicar.png</PhysicalRelativePath>
+      <SubType>StaticResource</SubType>
+    </Static>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="classes\AMICAR_ActualizaDesarrollo.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ActualizaDesarrollo.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ActualizaDesarrollo.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_ActualizaDesarrolloSincronizado.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ActualizaDesarrolloSincronizado.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ActualizaDesarrolloSincronizado.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_AsignacionManualController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_AsignacionManualController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_AsignacionManualController.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_CartaAdjudicacionController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_CartaAdjudicacionController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_CartaAdjudicacionController.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_ChecklistGetJSON.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ChecklistGetJSON.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ChecklistGetJSON.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_ChecklistGetJSONTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ChecklistGetJSONTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ChecklistGetJSONTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_ChecklistPutJSON.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ChecklistPutJSON.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ChecklistPutJSON.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_ChecklistPutJSONTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ChecklistPutJSONTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ChecklistPutJSONTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_copyActivitiesWSTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_copyActivitiesWSTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_copyActivitiesWSTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_copyEventsWS.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_copyEventsWS.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_copyEventsWS.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_CopyEventsWSJSON.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_CopyEventsWSJSON.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_CopyEventsWSJSON.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_copyLeadsWS.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_copyLeadsWS.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_copyLeadsWS.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_CopyLeadsWSJSON.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_CopyLeadsWSJSON.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_CopyLeadsWSJSON.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_copyLeadsWSTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_copyLeadsWSTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_copyLeadsWSTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_copyTasksWS.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_copyTasksWS.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_copyTasksWS.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_CopyTasksWSJSON.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_CopyTasksWSJSON.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_CopyTasksWSJSON.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_desmarcaUltimoEvento.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_desmarcaUltimoEvento.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_desmarcaUltimoEvento.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_desmarcaUltimoEventoTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_desmarcaUltimoEventoTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_desmarcaUltimoEventoTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_EliminaProductosOportunidad.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_EliminaProductosOportunidad.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_EliminaProductosOportunidad.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_EliminaSimulaciones.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_EliminaSimulaciones.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_EliminaSimulaciones.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_EnviaAdjudicacionController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaAdjudicacionController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_EnviaAdjudicacionController.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_EnviaProductosChecklist.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaProductosChecklist.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_EnviaProductosChecklist.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_EnviaSimulacionFormalizada.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaSimulacionFormalizada.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_EnviaSimulacionFormalizada.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_EnviaSimulacionRemate.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaSimulacionRemate.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_EnviaSimulacionRemate.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_EnviaSimulacionSincronizada.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaSimulacionSincronizada.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_EnviaSimulacionSincronizada.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_EnviaSimulacionSincronizadaTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaSimulacionSincronizadaTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_EnviaSimulacionSincronizadaTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_EnviaSimulSincroModRemateFin.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaSimulSincroModRemateFin.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_EnviaSimulSincroModRemateFin.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_EnviaSimulSincronizadaModificada.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_EnviaSimulSincronizadaModificada.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_EnviaSimulSincronizadaModificada.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_GetProductosChecklist.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_GetProductosChecklist.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_GetProductosChecklist.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_GetProductosChecklistTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_GetProductosChecklistTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_GetProductosChecklistTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_GetProductosInsuranceChecklist.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_GetProductosInsuranceChecklist.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_GetProductosInsuranceChecklist.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_MultipleEditDesarrollosController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_MultipleEditDesarrollosController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_MultipleEditDesarrollosController.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_ObtieneSimulaciones.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ObtieneSimulaciones.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ObtieneSimulaciones.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_ObtieneSimulacionesRenovacion.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ObtieneSimulacionesRenovacion.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ObtieneSimulacionesRenovacion.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_OpportunityJSON2.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_OpportunityJSON2.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_OpportunityJSON2.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_OpportunityTriggerHandler.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_OpportunityTriggerHandler.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_OpportunityTriggerHandler.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_ProcesaCartaController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ProcesaCartaController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ProcesaCartaController.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_PutProductosChecklistBody.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_PutProductosChecklistBody.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_PutProductosChecklistBody.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_PutProductosChecklistNoBody.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_PutProductosChecklistNoBody.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_PutProductosChecklistNoBody.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_Quote_controller_CreaPDF.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_Quote_controller_CreaPDF.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_Quote_controller_CreaPDF.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_Quote_controller_test.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_Quote_controller_test.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_Quote_controller_test.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_Resp_Simulacion_WSJson.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_Resp_Simulacion_WSJson.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_Resp_Simulacion_WSJson.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_Resp_Sincronizada_WSJson.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_Resp_Sincronizada_WSJson.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_Resp_Sincronizada_WSJson.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_ServicioRestOpportunityWS_SOQL.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ServicioRestOpportunityWS_SOQL.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ServicioRestOpportunityWS_SOQL.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_ServicioRestOpportunityWS_Test.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ServicioRestOpportunityWS_Test.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ServicioRestOpportunityWS_Test.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_ServicioRestOpportunity_HelpTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ServicioRestOpportunity_HelpTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ServicioRestOpportunity_HelpTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_ServiciosRestOpportunityWS.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ServiciosRestOpportunityWS.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ServiciosRestOpportunityWS.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_ServiciosRestOpportunityWS_Class.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_ServiciosRestOpportunityWS_Class.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_ServiciosRestOpportunityWS_Class.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_simulacionformalizaWSJSON.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_simulacionformalizaWSJSON.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_simulacionformalizaWSJSON.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_simulacionWSJSON.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_simulacionWSJSON.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_simulacionWSJSON.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_simulacionWSJSON_Test.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_simulacionWSJSON_Test.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_simulacionWSJSON_Test.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_sincromodificadaWSJSON.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_sincromodificadaWSJSON.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_sincromodificadaWSJSON.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_solicitudFormalizaWSJson.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_solicitudFormalizaWSJson.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_solicitudFormalizaWSJson.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_SolicitudFormalizaWSJson_Test.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_SolicitudFormalizaWSJson_Test.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_SolicitudFormalizaWSJson_Test.cls</DependentUpon>
+    </None>
+    <None Include="classes\AMICAR_TestProcesoVentaPiso.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\AMICAR_TestProcesoVentaPiso.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\AMICAR_TestProcesoVentaPiso.cls</DependentUpon>
+    </None>
+    <None Include="classes\ChangePasswordController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\ChangePasswordController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\ChangePasswordController.cls</DependentUpon>
+    </None>
+    <None Include="classes\ChangePasswordControllerTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\ChangePasswordControllerTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\ChangePasswordControllerTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\CommunitiesLandingController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\CommunitiesLandingController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\CommunitiesLandingController.cls</DependentUpon>
+    </None>
+    <None Include="classes\CommunitiesLoginController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\CommunitiesLoginController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\CommunitiesLoginController.cls</DependentUpon>
+    </None>
+    <None Include="classes\CommunitiesSelfRegConfirmController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\CommunitiesSelfRegConfirmController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\CommunitiesSelfRegConfirmController.cls</DependentUpon>
+    </None>
+    <None Include="classes\CommunitiesSelfRegController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\CommunitiesSelfRegController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\CommunitiesSelfRegController.cls</DependentUpon>
+    </None>
+    <None Include="classes\ForgotPasswordController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\ForgotPasswordController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\ForgotPasswordController.cls</DependentUpon>
+    </None>
+    <None Include="classes\ForgotPasswordControllerTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\ForgotPasswordControllerTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\ForgotPasswordControllerTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\MyProfilePageController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\MyProfilePageController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\MyProfilePageController.cls</DependentUpon>
+    </None>
+    <None Include="classes\MyProfilePageControllerTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\MyProfilePageControllerTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\MyProfilePageControllerTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\SiteLoginController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\SiteLoginController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\SiteLoginController.cls</DependentUpon>
+    </None>
+    <None Include="classes\SiteLoginControllerTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\SiteLoginControllerTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\SiteLoginControllerTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\SiteRegisterController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\SiteRegisterController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\SiteRegisterController.cls</DependentUpon>
+    </None>
+    <None Include="classes\SiteRegisterControllerTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\SiteRegisterControllerTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\SiteRegisterControllerTest.cls</DependentUpon>
+    </None>
+    <None Include="components\SiteFooter.component-meta.xml">
+      <PhysicalRelativePath>src\components\SiteFooter.component-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>components\SiteFooter.component</DependentUpon>
+    </None>
+    <None Include="components\SiteHeader.component-meta.xml">
+      <PhysicalRelativePath>src\components\SiteHeader.component-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>components\SiteHeader.component</DependentUpon>
+    </None>
+    <None Include="components\SiteLogin.component-meta.xml">
+      <PhysicalRelativePath>src\components\SiteLogin.component-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>components\SiteLogin.component</DependentUpon>
+    </None>
+    <None Include="components\SitePoweredBy.component-meta.xml">
+      <PhysicalRelativePath>src\components\SitePoweredBy.component-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>components\SitePoweredBy.component</DependentUpon>
+    </None>
+    <None Include="pages\Amicar_AsignacionManual.page-meta.xml">
+      <PhysicalRelativePath>src\pages\Amicar_AsignacionManual.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\Amicar_AsignacionManual.page</DependentUpon>
+    </None>
+    <None Include="pages\AMICAR_CartaAdjudicacion.page-meta.xml">
+      <PhysicalRelativePath>src\pages\AMICAR_CartaAdjudicacion.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\AMICAR_CartaAdjudicacion.page</DependentUpon>
+    </None>
+    <None Include="pages\AMICAR_EnviaAdjudicacion.page-meta.xml">
+      <PhysicalRelativePath>src\pages\AMICAR_EnviaAdjudicacion.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\AMICAR_EnviaAdjudicacion.page</DependentUpon>
+    </None>
+    <None Include="pages\AMICAR_MarcoDocumentosSolicitud.page-meta.xml">
+      <PhysicalRelativePath>src\pages\AMICAR_MarcoDocumentosSolicitud.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\AMICAR_MarcoDocumentosSolicitud.page</DependentUpon>
+    </None>
+    <None Include="pages\Amicar_MultipleEditDesarrollos.page-meta.xml">
+      <PhysicalRelativePath>src\pages\Amicar_MultipleEditDesarrollos.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\Amicar_MultipleEditDesarrollos.page</DependentUpon>
+    </None>
+    <None Include="pages\AMICAR_ProcesaCarta.page-meta.xml">
+      <PhysicalRelativePath>src\pages\AMICAR_ProcesaCarta.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\AMICAR_ProcesaCarta.page</DependentUpon>
+    </None>
+    <None Include="pages\AMICAR_Quote_CreatePDF_V.page-meta.xml">
+      <PhysicalRelativePath>src\pages\AMICAR_Quote_CreatePDF_V.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\AMICAR_Quote_CreatePDF_V.page</DependentUpon>
+    </None>
+    <None Include="pages\AnswersHome.page-meta.xml">
+      <PhysicalRelativePath>src\pages\AnswersHome.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\AnswersHome.page</DependentUpon>
+    </None>
+    <None Include="pages\BandwidthExceeded.page-meta.xml">
+      <PhysicalRelativePath>src\pages\BandwidthExceeded.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\BandwidthExceeded.page</DependentUpon>
+    </None>
+    <None Include="pages\ChangePassword.page-meta.xml">
+      <PhysicalRelativePath>src\pages\ChangePassword.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\ChangePassword.page</DependentUpon>
+    </None>
+    <None Include="pages\CommunitiesLanding.page-meta.xml">
+      <PhysicalRelativePath>src\pages\CommunitiesLanding.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\CommunitiesLanding.page</DependentUpon>
+    </None>
+    <None Include="pages\CommunitiesLogin.page-meta.xml">
+      <PhysicalRelativePath>src\pages\CommunitiesLogin.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\CommunitiesLogin.page</DependentUpon>
+    </None>
+    <None Include="pages\CommunitiesSelfReg.page-meta.xml">
+      <PhysicalRelativePath>src\pages\CommunitiesSelfReg.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\CommunitiesSelfReg.page</DependentUpon>
+    </None>
+    <None Include="pages\CommunitiesSelfRegConfirm.page-meta.xml">
+      <PhysicalRelativePath>src\pages\CommunitiesSelfRegConfirm.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\CommunitiesSelfRegConfirm.page</DependentUpon>
+    </None>
+    <None Include="pages\CommunitiesTemplate.page-meta.xml">
+      <PhysicalRelativePath>src\pages\CommunitiesTemplate.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\CommunitiesTemplate.page</DependentUpon>
+    </None>
+    <None Include="pages\Exception.page-meta.xml">
+      <PhysicalRelativePath>src\pages\Exception.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\Exception.page</DependentUpon>
+    </None>
+    <None Include="pages\FileNotFound.page-meta.xml">
+      <PhysicalRelativePath>src\pages\FileNotFound.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\FileNotFound.page</DependentUpon>
+    </None>
+    <None Include="pages\ForgotPassword.page-meta.xml">
+      <PhysicalRelativePath>src\pages\ForgotPassword.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\ForgotPassword.page</DependentUpon>
+    </None>
+    <None Include="pages\ForgotPasswordConfirm.page-meta.xml">
+      <PhysicalRelativePath>src\pages\ForgotPasswordConfirm.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\ForgotPasswordConfirm.page</DependentUpon>
+    </None>
+    <None Include="pages\IdeasHome.page-meta.xml">
+      <PhysicalRelativePath>src\pages\IdeasHome.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\IdeasHome.page</DependentUpon>
+    </None>
+    <None Include="pages\InMaintenance.page-meta.xml">
+      <PhysicalRelativePath>src\pages\InMaintenance.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\InMaintenance.page</DependentUpon>
+    </None>
+    <None Include="pages\MyProfilePage.page-meta.xml">
+      <PhysicalRelativePath>src\pages\MyProfilePage.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\MyProfilePage.page</DependentUpon>
+    </None>
+    <None Include="pages\SiteLogin.page-meta.xml">
+      <PhysicalRelativePath>src\pages\SiteLogin.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\SiteLogin.page</DependentUpon>
+    </None>
+    <None Include="pages\SiteRegister.page-meta.xml">
+      <PhysicalRelativePath>src\pages\SiteRegister.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\SiteRegister.page</DependentUpon>
+    </None>
+    <None Include="pages\SiteRegisterConfirm.page-meta.xml">
+      <PhysicalRelativePath>src\pages\SiteRegisterConfirm.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\SiteRegisterConfirm.page</DependentUpon>
+    </None>
+    <None Include="pages\SiteTemplate.page-meta.xml">
+      <PhysicalRelativePath>src\pages\SiteTemplate.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\SiteTemplate.page</DependentUpon>
+    </None>
+    <None Include="pages\StdExceptionTemplate.page-meta.xml">
+      <PhysicalRelativePath>src\pages\StdExceptionTemplate.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\StdExceptionTemplate.page</DependentUpon>
+    </None>
+    <None Include="pages\Unauthorized.page-meta.xml">
+      <PhysicalRelativePath>src\pages\Unauthorized.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\Unauthorized.page</DependentUpon>
+    </None>
+    <None Include="pages\UnderConstruction.page-meta.xml">
+      <PhysicalRelativePath>src\pages\UnderConstruction.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\UnderConstruction.page</DependentUpon>
+    </None>
+    <None Include="triggers\AMICAR_OpportunityTrigger.trigger-meta.xml">
+      <PhysicalRelativePath>src\triggers\AMICAR_OpportunityTrigger.trigger-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>triggers\AMICAR_OpportunityTrigger.trigger</DependentUpon>
+    </None>
+  </ItemGroup>
+</Project>
