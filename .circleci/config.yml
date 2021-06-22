@@ -26,7 +26,7 @@ jobs:
               echo "Esto es una prueba"
       - run:
           name: Validate Components & Run Tests
-          no_output_timeout: 5m
+          #no_output_timeout: 7m
           command: . build/test.sh
       - store_test_results:
           path: test-results
