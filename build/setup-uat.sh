@@ -6,4 +6,4 @@ echo $SFDC_UAT_USER
 echo $SFDC_SERVER_KEY | base64 -d > JWT/server.key
 echo "Authenticating orgUAT"
 #sfdx force:auth:logout --targetusername $SFDC_UAT_USER -p & sfdx force:auth:jwt:grant -i $SFDC_UAT_CLIENTID -f JWT/server.key -u $SFDC_UAT_USER -a DevHubUAT --instanceurl "https://test.salesforce.com"
-sfdx force:auth:logout --targetusername $SFDC_UAT_USER -p & sfdx force:auth:jwt:grant --clientid $SFDC_UAT_CLIENTID --instanceurl "https://amicar--sbxdodoria.my.salesforce.com/" --username $SFDC_UAT_USER --jwtkeyfile $SFDC_SERVER_KEY
+sfdx force:auth:logout --targetusername consultor_force+amicar@nectia.com.sbxdodoria -p & sfdx force:auth:jwt:grant --clientid $SFDC_UAT_CLIENTID --instanceurl "https://amicar--sbxdodoria.my.salesforce.com/" --username consultor_force+amicar@nectia.com.sbxdodoria --jwtkeyfile $SFDC_SERVER_KEY
