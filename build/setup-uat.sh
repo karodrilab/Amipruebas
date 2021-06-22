@@ -1,7 +1,7 @@
 # Get the private key from the environment variable
 echo "Logging into Salesforce OrgUAT"
 dir
-echo "hola"
+echo $SFDC_UAT_USER
 #mkdir JWT
 echo $SFDC_SERVER_KEY | base64 -d > JWT/server.key
 echo "Authenticating orgUAT"
