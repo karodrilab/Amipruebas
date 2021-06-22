@@ -4,4 +4,4 @@ mkdir JWT
 echo $SFDC_SERVER_KEY | base64 -d > JWT/server.key
 
 echo "Authenticating org"
-sfdx force:auth:jwt:grant --clientid $SFDC_PROD_CLIENTID --jwtkeyfile JWT/server.key --username $SFDC_PROD_USER --setdefaultdevhubusername -a DevHub
+sfdx force:auth:jwt:grant -i $SFDC_PROD_CLIENTID -f JWT/server.key -u $SFDC_PROD_USER -a DevHubProd
