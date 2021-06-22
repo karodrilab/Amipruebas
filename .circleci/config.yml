@@ -20,6 +20,9 @@ jobs:
      #     name: Carpeta Tests
       #    command: . classes/test.cls
       - run:
+          name: Login to PRUEBA
+          command: . build/setup-uat.sh
+      - run:
           name: Validate Components & Run Tests
           #no_output_timeout: 1200
           command: . build/test.sh
