@@ -21,8 +21,12 @@ jobs:
       #    name: Carpeta Tests
       #    command: . classes/test.cls
       - run:
+            name: Echo Validate Components & Run Tests
+            command: |
+              echo "Esto es una prueba"
+      - run:
           name: Validate Components & Run Tests
-          no_output_timeout: 2m
+          no_output_timeout: 5m
           command: . build/test.sh
       - store_test_results:
           path: test-results
