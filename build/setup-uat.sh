@@ -1,6 +1,6 @@
 # Get the private key from the environment variable
 echo "Logging into Salesforce OrgUAT"
-echo dir
+echo ls
 echo "hola"
 mkdir JWT
 echo dir
