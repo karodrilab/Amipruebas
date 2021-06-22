@@ -1,6 +1,6 @@
 #Get the private key from the environment variable
 echo "Setting up SANDBOX Connection..."
-mkdir JWT
+#mkdir JWT
 echo $SFDC_SERVER_KEY | base64 -d > JWT/server.key
 
 # Authenticate to salesforce
