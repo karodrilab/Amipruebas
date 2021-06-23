@@ -49,9 +49,9 @@ workflows:
           filters:
             branches:
               ignore:
-                - master
+                - UAT
       - deploy-prod:
           filters:
             branches:
               only:
-                - master
+                - PruebaRodri
