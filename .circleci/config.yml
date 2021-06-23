@@ -12,8 +12,11 @@ jobs:
           name: Create Scratch Org
           command: . build/create-scratch-org.sh
       - run:
+          name: Login to TEST
+          command: . build/setup-uat.sh
+      - run:
           name: Validate Components & Run Tests
-          command: sfdx force:apex:test:run -n "AMICAR_ChecklistGetJSONTest" -r human -u --targetusername $SFDC_UAT_USER
+          command: sfdx force:apex:test:run -n "AMICAR_ChecklistGetJSONTest" -r human
       - store_test_results:
           path: test-results
   deploy-prod:
@@ -38,7 +41,7 @@ workflows:
           filters:
             branches:
               ignore:
-                - master
+                - UAT
       - deploy-prod:
           filters:
             branches:
