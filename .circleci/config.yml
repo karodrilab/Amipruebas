@@ -9,7 +9,7 @@ jobs:
     docker:
       - image: circleci/node:latest
     steps:
-      - checkout:
+      checkout:
       - run:
           name: Install Dependencies
           command: . build/install.sh
@@ -25,7 +25,7 @@ jobs:
     docker:
     - image: circleci/node:latest
     steps:
-      - checkout:
+      checkout:
       - run:
           name: Install Dependencies
           command: . build/install.sh
