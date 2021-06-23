@@ -9,7 +9,7 @@ jobs:
     docker:
       - image: circleci/node:latest
     steps:
-      - checkout
+      - checkout:
       - run:
           name: Install Dependencies
           command: . build/install.sh
@@ -18,7 +18,6 @@ jobs:
           command: . build/create-scratch-org.sh
       - run:
           name: Validate Components & Run Tests
-          #no_output_timeout: 1200
           command: . build/test.sh
       - store_test_results:
           path: test-results
@@ -26,12 +25,12 @@ jobs:
     docker:
     - image: circleci/node:latest
     steps:
-      - checkout
+      - checkout:
       - run:
           name: Install Dependencies
           command: . build/install.sh
       - run:
-          name: Login to PROD
+          name: Login to PRUEBA
           command: . build/setup-prod.sh
        - run:
            name: Deploy to PRUEBA
@@ -48,4 +47,4 @@ workflows:
           filters:
             branches:
               only:
-                - UAT
+                - Master
