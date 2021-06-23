@@ -2,7 +2,7 @@
 echo "Converting to MDAPI format..."
 sfdx force:org:list
 mkdir packageRoles
-sfdx force:mdapi:retrieve -r packageRoles -u my-hub-orgPruebasCI -k package.xml 
+sfdx force:mdapi:retrieve -r packageRoles -u my-hub-orgPruebasCI -k packageRoles/package.xml 
 sfdx force:mdapi:retrieve:report -u consultor_force+amicar@nectia.com.pruebasci
 #sfdx force:mdapi:deploy -c -f packageRoles.zip -u my-hub-Dodoria -w 10
 
