@@ -16,7 +16,7 @@ jobs:
           command: . build/setup-uat.sh
       - run:
           name: Validate Components & Run Tests
-          command: sfdx force:apex:test:run -n "AMICAR_ChecklistGetJSONTest" -r human
+          command: sfdx force:apex:test:run -n "AMICAR_ChecklistGetJSONTest" -r human -u --targetusername $SFDC_UAT_USER
       - store_test_results:
           path: test-results
   deploy-prod:
