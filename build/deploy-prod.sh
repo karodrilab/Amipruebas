@@ -1,7 +1,7 @@
 #Convert to MDAPI format for deployment to prod
 echo "Converting to MDAPI format..."
 sfdx force:org:list
-sfdx force:mdapi:retrieve -r /packageRoles.zip -u my-hub-orgPruebasCI -k ~/packageRoles.xml
+sfdx force:mdapi:retrieve -r /packageRoles.zip -u my-hub-orgPruebasCI -k . /packageRoles.xml
 sfdx force:mdapi:deploy -c -f /packageRoles.zip -u my-hub-org2 -w 10
 
 #r: donde se guardara el archivo.
