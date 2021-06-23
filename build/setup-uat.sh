@@ -1,9 +1,7 @@
 #Get the private key from the environment variable
-echo "Setting up SANDBOX Connection..."
-#mkdir JWT
-echo $SFDC_SERVER_KEY | base64 -d > JWT/server.key
-
-# Authenticate to salesforce
-echo "Authenticating uat..."
-#sfdx force:auth:logout --targetusername $SFDC_PROD_USER -p 
-sfdx force:auth:jwt:grant --clientid $SFDC_UAT_CLIENTID -u --username $SFDC_UAT_USER -f --jwtkeyfile $SFDC_SERVER_KEY.ENC --setdefaultdevhubusername -a DevhubQA
+echo "Logging into Salesforce Org"
+echo "Authenticating orgqa"
+#PRUEBACI
+echo "Conectar PruebasCi"
+#sfdx auth:jwt:grant --clientid 3MVG9eQyYZ1h89HcPBQTxIzUhVbC9BLVh_W8x4VdZ4xjNT0A5xTjv0aKXIy4k0bTvv.QUNRcA5Ug0DjlROf4w --jwtkeyfile JWT/server.key --username consultor_force+amicar@nectia.com.pruebasci --instanceurl https://test.salesforce.com
+sfdx auth:jwt:grant --clientid $SFDC_UAT_CLIENTID --jwtkeyfile JWT/server.key --username $SFDC_UAT_USER --instanceurl https://test.salesforce.com
