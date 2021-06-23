@@ -11,9 +11,9 @@ jobs:
       - run:
           name: Create Scratch Org
           command: . build/create-scratch-org.sh
-      - run:
-          name: Login to TEST
-          command: . build/setup-uat.sh
+    #  - run:
+      #    name: Login to TEST
+       #   command: . build/setup-uat.sh
       #- run:
           #name: Validate Components & Run Tests
          # command: . build/test.sh
