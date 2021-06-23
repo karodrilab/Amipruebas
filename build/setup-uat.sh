@@ -1,9 +1,7 @@
 # Get the private key from the environment variable
-echo "Logging into Salesforce OrgUAT"
-dir
-echo $SFDC_UAT_USER
+echo "Logging into Salesforce Org"
 #mkdir JWT
 echo $SFDC_SERVER_KEY | base64 -d > JWT/server.key
-echo "Authenticating orgUAT"
-#sfdx force:auth:logout --targetusername $SFDC_UAT_USER -p & sfdx force:auth:jwt:grant -i $SFDC_UAT_CLIENTID -f JWT/server.key -u $SFDC_UAT_USER -a DevHubUAT --instanceurl "https://test.salesforce.com"
-sfdx force:auth:logout --targetusername consultor_force+amicar@nectia.com.sbxdodoria -p & sfdx force:auth:jwt:grant --clientid $SFDC_UAT_CLIENTID --instanceurl "https://amicar--sbxdodoria.my.salesforce.com/" --username consultor_force+amicar@nectia.com.sbxdodoria
+
+echo "Authenticating org"
+sfdx force: auth: logout --targetusername %USERNAME% -p sfdx force:auth:jwt:grant --clientid $SFDC_UAT_CLIENTID --jwtkeyfile JWT/server.key --username $SFDC_UAT_USER --setdefaultdevhubusername -a DevHub
