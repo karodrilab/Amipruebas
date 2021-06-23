@@ -3,12 +3,12 @@ echo "Converting to MDAPI format..."
 sfdx force:org:list
 mkdir packageRoles
 sfdx force:mdapi:retrieve -r packageRoles -u my-hub-orgPruebasCI -k ./packageRoles.xml
-sfdx force:mdapi:deploy -c -f ../packageRoles.zip -u my-hub-Dodoria -w 10
+sfdx force:mdapi:deploy -c -f packageRoles.zip -u my-hub-Dodoria -w 10
 
 #r: donde se guardara el archivo.
 #-k listado de componentes 
 #-c Valida
-#-f dondese encuentra el zip
+#-f donde se encuentra el zip
 
 #sfdx force: mdapi:convert -d deploy_prod -r mdapipackage /
 #sfdx force:source:convert -d deploy_prod -r src
