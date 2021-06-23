@@ -14,9 +14,9 @@ jobs:
       - run:
           name: Login to TEST
           command: . build/setup-uat.sh
-      - run:
-          name: Validate Components & Run Tests
-          command: . build/test.sh
+      #- run:
+          #name: Validate Components & Run Tests
+         # command: . build/test.sh
       - store_test_results:
           path: test-results
   deploy-prod:
