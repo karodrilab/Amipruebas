@@ -1,6 +1,6 @@
 #Get the private key from the environment variable
 echo "Logging into Salesforce Org"
-#mkdir JWT
+mkdir JWT
 echo $SFDC_SERVER_KEY | base64 -d > JWT/server.key
 echo "Authenticating org"
 #sfdx force:auth:jwt:grant --clientid $SFDC_PROD_CLIENTID --jwtkeyfile server.key --username $SFDC_PROD_USER --setdefaultdevhubusername
