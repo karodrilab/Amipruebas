@@ -3,8 +3,8 @@ echo "Converting to MDAPI format..."
 sfdx force:org:list
 #mkdir packageRoles
 echo "Command - sfdx force:mdapi:retrieve -r packageRoles -u my-hub-orgPruebasCI -k packageRoles/package.xml"
-sfdx force:source:retrieve -r packageRoles -u my-hub-orgPruebasCI -k package.xml
-#sfdx force:mdapi:retrieve -r packageRoles -u my-hub-orgPruebasCI -k package.xml 
+#sfdx force:source:retrieve -r packageRoles -u my-hub-orgPruebasCI -k ./package.xml
+sfdx force:mdapi:retrieve -r packageRoles -u my-hub-orgPruebasCI -k package.xml 
 #sfdx force: mdapi:convert -d deploy_prod -r packageRoles
 #sfdx force:mdapi:retrieve:report -u consultor_force+amicar@nectia.com.pruebasci
 #sfdx force:mdapi:deploy -c -d packageRoles -u my-hub-Dodoria -w 10
