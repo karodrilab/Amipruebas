@@ -8,7 +8,7 @@ echo "Command - sfdx force:mdapi:retrieve -r packageRoles -u my-hub-orgPruebasCI
 sfdx force: mdapi:convert -d deploy_prod -r packageRoles
 sfdx config:set defaultusername=consultor_force+amicar@nectia.com.pruebasci
 #sfdx force:mdapi:retrieve:report -u consultor_force+amicar@nectia.com.pruebasci
-sfdx force:mdapi:deploy -c -d packageRoles -u my-hub-orgPruebasCI -w 10 -l RunSpecifiedTests -r AMICAR_ChecklistGetJSONTest -w 33 --outputdir test-results --verbose --loglevel fatal 
+sfdx force:mdapi:deploy -c -d packageRoles -u my-hub-orgPruebasCI -w 10 -l RunSpecifiedTests -r AMICAR_ChecklistGetJSONTest -w 33 --verbose --loglevel fatal
 #-l RunLocalTests -d src/classes -u my-hub-orgPruebasCI #Para todos por proyectos NO AMICAR!!!
 #r: donde se guardara el archivo.
 #-k listado de componentes 
