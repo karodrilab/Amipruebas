@@ -14,6 +14,8 @@ sfdx force:mdapi:deploy -c -d packageRoles -u my-hub-orgPruebasCI -w 10 -l RunSp
 #-k listado de componentes 
 #-c Valida
 #-f donde se encuentra el zip
+#--loglevel variables que acompañan values are: trace, debug, info, warn, error, fatal
+#-l = testlevel variables que lo acompañan 	RunLocalTests, RunAllTestsInOrg, RunSpecifiedTests
 
 #sfdx force: mdapi:convert -d deploy_prod -r mdapipackage /
 #sfdx force:source:convert -d deploy_prod -r src
