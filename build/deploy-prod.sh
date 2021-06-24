@@ -8,7 +8,7 @@ echo "Command - sfdx force:mdapi:retrieve -r packageRoles -u my-hub-orgPruebasCI
 sfdx force: mdapi:convert -d deploy_prod -r packageRoles
 sfdx config:set defaultusername=consultor_force+amicar@nectia.com.pruebasci
 #sfdx force:mdapi:retrieve:report -u consultor_force+amicar@nectia.com.pruebasci
-sfdx force:mdapi:deploy -c -d packageRoles -u my-hub-Dodoria -w 10
+sfdx force:mdapi:deploy -c -d packageRoles -u my-hub-orgPruebasCI -w 10
 
 #r: donde se guardara el archivo.
 #-k listado de componentes 
