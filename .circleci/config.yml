@@ -18,7 +18,7 @@ jobs:
        #   name: Validate Components & Run Tests
         #  command: . build/test.sh
       - store_test_results:
-          path: /home/circleci/project/test-results
+          path: /home/circleci/project
   deploy-prod:
     docker:
     - image: circleci/node:latest
